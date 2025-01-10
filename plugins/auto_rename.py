@@ -7,25 +7,25 @@ from helper.database import hyoshcoder
 async def auto_rename_command(client, message):
     user_id = message.from_user.id
 
-    # Extraire le format de la commande
     command_parts = message.text.split("/autorename", 1)
-    if len(command_parts) < 2 or not command_parts[1].strip() == "":
-        await message.reply_text("**Vᴇᴜɪʟʟᴇᴢ ᴘʀᴏᴠɪᴅᴇʀ ᴜɴ ɴᴏᴜᴠᴇᴀᴜ ɴᴏᴍ ᴀᴘʀès ʟᴀ ᴄᴏᴍᴍᴀɴᴅᴇ /ᴀᴜᴛᴏʀᴇɴᴀᴍᴇ**\n\n"
-                         "Pour ᴄᴏᴍᴍᴇɴᴄᴇʀ ʟ'ᴜᴛɪʟɪsᴀᴛɪᴏɴ :\n"
-                         "**Fᴏʀᴍᴀᴛ ᴅ'ᴇxᴀᴍᴘʟᴇ :** `ᴍᴏɴSᴜᴘᴇʀVɪᴅᴇᴏ [episode] [quality]`")
-
+    if len(command_parts) < 2 or not command_parts[1].strip():
+        await message.reply_text(
+            "**Vᴇᴜɪʟʟᴇᴢ ᴘʀᴏᴠɪᴅᴇʀ ᴜɴ ɴᴏᴜᴠᴇᴀᴜ ɴᴏᴍ ᴀᴘʀès ʟᴀ ᴄᴏᴍᴍᴀɴᴅᴇ /ᴀᴜᴛᴏʀᴇɴᴀᴍᴇ**\n\n"
+            "Pour ᴄᴏᴍᴍᴇɴᴄᴇʀ ʟ'ᴜᴛɪʟɪsᴀᴛɪᴏɴ :\n"
+            "**Fᴏʀᴍᴀᴛ ᴅ'ᴇxᴀᴍᴘʟᴇ :** `ᴍᴏɴSᴜᴘᴇʀVɪᴅᴇᴏ [episode] [quality]`"
+        )
         return
 
     format_template = command_parts[1].strip()
 
-    # Enregistrer le modèle de format dans la base de données
     await hyoshcoder.set_format_template(user_id, format_template)
 
-    # Envoyer un message de confirmation avec le modèle en police mono
-    await message.reply_text(f"**🌟 Fᴀɴᴛᴀsᴛɪqᴜᴇ! Vᴏᴜs êᴛᴇs ᴘʀêᴛ ᴀ ʀᴇɴᴏᴍᴍᴇʀ ᴀᴜᴛᴏᴍᴀᴛɪqᴜᴇᴍᴇɴᴛ vᴏᴛʀᴇs ꜰɪʟᴇs.**\n\n"
-                            "📩 Iʟ vᴏᴜs sᴜꜰꜰɪᴛ d'ᴇɴᴠᴏʏᴇʀ ʟᴇs ꜰɪʟᴇs qᴜᴇ vᴏᴜs sᴏʜᴀɪᴛᴇᴢ ʀᴇɴᴏᴍᴍᴇʀ.\n\n"
-                            f"**Vᴏᴛʀᴇ mᴏᴅèʟᴇ ᴇɴʀᴇɢɪsᴛʀé :** `{format_template}`\n\n"
-                             "Rappelez-vous, je vais peut-être renommer vos fichiers lentement mais je les rendrai sûrement parfaits!✨")
+    await message.reply_text(
+        f"**🌟 Fᴀɴᴛᴀsᴛɪqᴜᴇ! Vᴏᴜs êᴛᴇs ᴘʀêᴛ ᴀ ʀᴇɴᴏᴍᴍᴇʀ ᴀᴜᴛᴏᴍᴀᴛɪqᴜᴇᴍᴇɴᴛ vᴏᴛʀᴇs ꜰɪʟᴇs.**\n\n"
+        "📩 Iʟ vᴏᴜs sᴜꜰꜰɪᴛ d'ᴇɴᴠᴏʏᴇʀ ʟᴇs ꜰɪʟᴇs qᴜᴇ vᴏᴜs sᴏᴜʜᴀɪᴛᴇᴢ ʀᴇɴᴏᴍᴍᴇʀ.\n\n"
+        f"**Vᴏᴛʀᴇ mᴏᴅèʟᴇ ᴇɴʀᴇɢɪsᴛʀé :** `{format_template}`\n\n"
+        "Rappelez-vous, je vais peut-être renommer vos fichiers lentement mais je les rendrai sûrement parfaits!✨"
+    )
 
 @Client.on_message(filters.private & filters.command("setmedia"))
 async def set_media_command(client, message):
