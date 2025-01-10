@@ -87,7 +87,7 @@ status - Check bot status [FOR ADMINS USE ONLY].
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/weebs_support"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/tout_manga_confondu"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
 <a href="https://telegram.me/hyoshassistantbot"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
