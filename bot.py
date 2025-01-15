@@ -17,7 +17,7 @@ MIN_CHANNEL_ID = int(os.environ.get("MIN_CHANNEL_ID"))
 pyrogram.utils.MIN_CHANNEL_ID =MIN_CHANNEL_ID
 
 # Setting SUPPORT_CHAT directly here
-SUPPORT_CHAT = int(os.environ.get("SUPPORT_CHAT"))
+SUPPORT_CHAT =-1002229122792
 
 class Bot(Client):
 
