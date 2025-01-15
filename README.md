@@ -102,7 +102,7 @@ Pour plus de détails, rejoins notre [chaîne d'actualités](https://t.me/hyoshc
 
 ### Support
 <p align="center">
-<a href="https://telegram.me/weebs_support"><img src="https://img.shields.io/badge/Groupe%20de%20Support-bleu?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/hyoshcoder_main"><img src="https://img.shields.io/badge/Groupe%20de%20Support-bleu?style=for-the-badge&logo=Telegram"></a>
 <a href="https://telegram.me/hyoshassistantbot"><img src="https://img.shields.io/badge/Chaîne%20de%20Support-bleu?style=for-the-badge&logo=Telegram"></a>
 </p>
 
