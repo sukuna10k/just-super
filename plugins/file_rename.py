@@ -309,15 +309,26 @@ async def auto_rename_files(client, message):
         c_caption = await hyoshcoder.get_caption(message.chat.id)
         c_thumb = await hyoshcoder.get_thumbnail(message.chat.id)
 
+        if message.document:
+            file_size = humanbytes(message.document.file_size)
+            duration = convert(0)
+        elif message.video:
+            file_size = humanbytes(message.video.file_size)
+            duration = convert(message.video.duration or 0) 
+        else:
+            await message.reply("Le message ne contient pas de document ou de vidéo pris en charge.")
+            return
+
         caption = (
             c_caption.format(
                 filename=renamed_file_name,
-                filesize=humanbytes(message.document.file_size),
-                duration=convert(0),
+                filesize=file_size,
+                duration=duration,
             )
             if c_caption
             else f"**{renamed_file_name}**"
         )
+
 
         if c_thumb:
             ph_path = await client.download_media(c_thumb)
