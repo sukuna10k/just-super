@@ -18,13 +18,9 @@ _**Disponible sur Telegram en tant que [Renommeur Automatique](https://t.me/hina
 
 <h3 align="center">── DÉPLOIEMENT SUR HEROKU ──</h3>
 <p align="center">
-<<<<<<< HEAD
   <a href="https://dashboard.heroku.com/new?template=https://github.com/kalebavincent/AutoRenameBot">
     <img src="https://img.shields.io/badge/Déployer%20sur%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/>
   </a>
-=======
-<a href="https://telegram.me/tout_manga_confondu"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
->>>>>>> badcff1c11362177c68b9f8fe731f14fa6b98b36
 </p>
 
 <h3 align="center">── DÉPLOIEMENT SUR KOYEB ──</h3>
