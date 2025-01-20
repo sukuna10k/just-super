@@ -142,7 +142,7 @@ def extract_quality(filename):
     return unknown_quality
     
 
-def extract_episode_number(filename):    
+def extract_episode_number(filename):
     # Try Pattern 1
     match = re.search(pattern1, filename)
     if match:
@@ -173,12 +173,18 @@ def extract_episode_number(filename):
         print("Matched Pattern 4")
         return match.group(2)  # Extracted episode number
 
+    # Try Pattern 17 (nouveau pattern pour les titres français)
+    match = re.search(pattern17, filename)
+    if match:
+        print("Matched Pattern 17")
+        return match.group(2)  # Extracted episode number
+
     # Try Pattern X
     match = re.search(patternX, filename)
     if match:
         print("Matched Pattern X")
         return match.group(1)  # Extracted episode number
-        
+
     # Return None if no pattern matches
     return None
 
