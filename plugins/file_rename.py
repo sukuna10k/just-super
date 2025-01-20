@@ -47,6 +47,8 @@ pattern13 = re.compile(r'[([<{]?\s*SD\s*[)\]>}]?', re.IGNORECASE)
 pattern14 = re.compile(r'[([<{]?\s*convertie\s*[)\]>}]?', re.IGNORECASE)
 pattern15 = re.compile(r'[([<{]?\s*converti\s*[)\]>}]?', re.IGNORECASE)
 pattern16 = re.compile(r'[([<{]?\s*convertis\s*[)\]>}]?', re.IGNORECASE)
+# Pattern 17: Episode number in "épisode X" or "saison X épisode Y"
+pattern17 = re.compile(r'(?:saison\s*(\d+)\s*)?épisode\s*(\d+)', re.IGNORECASE)
 
 def extract_quality(filename):
     # Try Quality Patterns
