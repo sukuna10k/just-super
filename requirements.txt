@@ -10,3 +10,4 @@ humanize
 pyromod
 python-dotenv
 ffmpeg-python
+aiofiles

@@ -16,6 +16,7 @@ class Config(object):
     DB_NAME = os.environ.get("DB_NAME")     
     DB_URL  = os.environ.get("DB_URL")
     PORT = os.environ.get("PORT")
+    WEBSERVICE = os.environ.get("WEBSERVICE")
  
     # other configs
     BOT_UPTIME  = time.time()
