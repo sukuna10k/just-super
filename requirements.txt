@@ -11,3 +11,4 @@ pyromod
 python-dotenv
 ffmpeg-python
 aiofiles
+aiohttp 
