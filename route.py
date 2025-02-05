@@ -18,6 +18,6 @@ async def root_route_handler(request):
 
 async def web_server():
     web_app = web.Application(client_max_size=30000000)
-    web_app.add_routes(routes)
+    web_app.add_routes([web.static("/web", WEB_DIR)])
     return web_app
 
