@@ -8,22 +8,22 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID")
-    API_HASH  = os.environ.get("API_HASH")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN") 
+    API_ID    = os.environ.get("API_ID", "24817837")
+    API_HASH  = os.environ.get("API_HASH", "acd9f0cc6beb08ce59383cf250052686")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7461711084:AAEacHJPVfMZ0AZoFgFikwYhdoGw5NuOH-Q") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME")     
-    DB_URL  = os.environ.get("DB_URL")
-    PORT = os.environ.get("PORT")
+    DB_NAME = os.environ.get("DB_NAME", "lupinf")     
+    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://lupinf:snowb@lupinf.1ft25.mongodb.net/?retryWrites=true&w=majority&appName=lupinf")
+    PORT = os.environ.get("PORT", "8080")
     WEBSERVICE = os.environ.get("WEBSERVICE")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '5814104129').split(',')]
-    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'hyoshmangavf').split(',')
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
+    START_PIC   = os.environ.get("START_PIC", "https://envs.sh/E3H.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7428552084').split(',')]
+    FORCE_SUB_CHANNELS = os.environ.get('FORCE_SUB_CHANNELS', 'bot_kingdox').split(',')
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002376378205"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK"))
@@ -33,11 +33,11 @@ class Txt(object):
     # part of text configuration
         
     START_TXT = """
-<b>ꜱᴀʟᴜᴛ! {}  
+<b>Salut! {}  
 
-ᴊᴇ ꜱᴜɪꜱ ʜɪɴᴀᴛᴀ ʜʏᴜɢᴀ, ᴋᴜɴᴏɪᴄʜɪ ᴅᴜ ᴄʟᴀɴ ʜʏᴜɢᴀ ᴇᴛ, ᴀᴜᴊᴏᴜʀᴅ'ʜᴜɪ, ᴠᴏᴛʀᴇ ᴀꜱꜱɪꜱᴛᴀɴᴛᴇ ᴅéᴠᴏᴜéᴇ. 🌀
+Je suis Zoro auto renamer bot. un super bot de renomage de fichier  🌀
 
-» ᴛᴏᴜᴛ ᴄᴏᴍᴍᴇ ᴊᴇ ᴘʀᴏᴛèɢᴇ ᴄᴇᴜx ǫᴜɪ ᴍᴇ ꜱᴏɴᴛ ᴄʜᴇʀꜱ ᴀᴠᴇᴄ ᴍᴏɴ ʙʏᴀᴋᴜɢᴀɴ, ᴊᴇ ᴠᴀɪꜱ ᴍ'ᴀꜱꜱᴜʀᴇʀ ǫᴜᴇ ᴠᴏꜱ ꜰɪᴄʜɪᴇʀꜱ ꜱᴏɪᴇɴᴛ ʀᴇɴᴏᴍᴍéꜱ ᴀᴠᴇᴄ ᴘʀéᴄɪꜱɪᴏɴ ᴇᴛ ꜱᴛʏʟᴇ.  
+»Je suis un chasseur de pirates déterminé, et avec ma volonté de fer, je protège ceux qui me sont chers. Je vais m'assurer que vos fichiers soient renommés avec précision, tout comme je vise à devenir le meilleur épéiste du monde. Mon chemin est semé d'embûches, mais je ne reculerai jamais !
 » ᴀᴊᴏᴜᴛᴇᴢ ᴜɴᴇ ʟéɢᴇɴᴅᴇ ᴘᴇʀꜱᴏɴɴᴀʟɪꜱéᴇ, ᴜɴᴇ ᴍɪɴɪᴀᴛᴜʀᴇ éʟéɢᴀɴᴛᴇ ᴇᴛ ʟᴀɪꜱꜱᴇᴢ-ᴍᴏɪ ꜱéǫᴜᴇɴᴄᴇʀ ᴠᴏꜱ ꜰɪᴄʜɪᴇʀꜱ à ʟᴀ ᴘᴇʀꜰᴇᴄᴛɪᴏɴ.  
 
 ᴊᴇ ꜱᴜɪꜱ ʟà ᴘᴏᴜʀ ᴠᴏᴜꜱ, ᴀᴠᴇᴄ ᴛᴏᴜᴛᴇ ʟᴀ ᴅᴏᴜᴄᴇᴜʀ ᴇᴛ ʟᴀ ᴅéᴛᴇʀᴍɪɴᴀᴛɪᴏɴ ᴅ'ᴜɴᴇ ɴɪɴᴊᴀ ᴘʀêᴛᴇ à ᴀᴄᴄᴏᴍᴘʟɪʀ ꜱᴀ ᴍɪꜱꜱɪᴏɴ. ꜰᴀɪꜱᴏɴꜱ éǫᴜɪᴘᴇ ᴘᴏᴜʀ ᴜɴᴇ ᴇxᴘéʀɪᴇɴᴄᴇ ᴜɴɪǫᴜᴇ !</b>
@@ -50,18 +50,17 @@ class Txt(object):
 ➲ episode - ᴘᴏᴜʀ ʀᴇᴍᴘʟᴀᴄᴇʀ ʟᴇ ɴᴜᴍᴇ́ʀᴏ ᴅᴇ ʟ'ᴇᴘɪsᴏᴅᴇ  
 ➲ quality - ᴘᴏᴜʀ ʀᴇᴍᴘʟᴀᴄᴇʀ ʟᴀ ǫᴜᴀʟɪᴛᴇ́  
 
-<b>‣ ᴘᴀʀ ᴇxᴀᴍᴘʟᴇ :- </b> <code> /autorename Suicide Squad [S02 - EPepisode - [Quality] [Dual] @hyoshmangavf </code>
+<b>‣ ᴘᴀʀ ᴇxᴀᴍᴘʟᴇ :- </b> <code> /autorename Suicide Squad [S02 - EPepisode - [Quality] [Dual] @AntiFlix_A </code>
 
 <b>‣ /Autorename : ʀᴇɴᴏᴍᴍᴇᴢ ᴠᴏs ꜰɪʟᴇs ᴍᴜʟᴛɪᴍᴇᴅɪᴀ ᴇɴ ɪɴᴄʟᴜᴀɴᴛ ʟᴇs ᴠᴀʀɪᴀʙʟᴇs 'ᴇᴘɪsᴏᴅᴇ' ᴇᴛ 'ǫᴜᴀʟɪᴛᴇ́' ᴅᴀɴs vᴏᴛʀᴇ ᴛᴇxᴛᴇ, ᴘᴏᴇᴜʀ ᴇxᴛʀᴀɪʀᴇʀ l'ᴇᴘɪsᴏᴅᴇ ᴇᴛ ʟa ǫᴜᴀʟɪᴛᴇ́ ᴘʀᴇ́sᴇɴᴛs ᴅᴀɴs lᴇ ɴᴏᴍ ᴅᴇ ꜰɪʟᴇ ᴏʀɪɢɪɴᴀʟ.</b>"""
 
 
     ABOUT_TXT = f"""<b>❍ ᴍᴏɴ ɴᴏᴍ : <a href="https://t.me/hyoshassistantbot">ɢᴇ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ</a>  
-❍ ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴜʀ : <a href="https://t.me/hyoshassistantBot">ᴘʀᴏᴘʀɪᴇ́ᴛᴀɪʀᴇ</a>  
-❍ ɢɪᴛʜᴜʙ : <a href="https://github.com/ hyoshassistantBot">ᴘʀᴏᴘʀɪᴇ́ᴛᴀɪʀᴇ</a>  
+❍ ᴅᴇ́ᴠᴇʟᴏᴘᴘᴇᴜʀ : <a href="https://t.me/KIngcey"> 🇰ιηg¢єу</a>   
 ❍ ʟᴀɴɢᴀɢᴇ : <a href="https://www.python.org/">ᴘʏᴛʜᴏɴ</a>  
 ❍ ʙᴀsᴇ ᴅᴇ ᴅᴏɴɴᴇ́ᴇs : <a href="https://www.mongodb.com/">ᴍᴏɴɢᴏᴅʙ</a>  
-❍ ʜᴇ́ʙᴇʀɢᴇ́ sᴜʀ : <a href="https://t.me/hyoshassistantbot">ᴠᴘs</a>  
-❍ ᴄᴀɴᴀʟ ᴘʀɪɴᴄɪᴘᴀʟ : <a href="https://t.me/hyoshmangavf">ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ</a>  
+❍ ʜᴇ́ʙᴇʀɢᴇ́ sᴜʀ : <a href="https://t.me/Otakukingcey1">ᴠᴘs</a>  
+❍ ᴄᴀɴᴀʟ ᴘʀɪɴᴄɪᴘᴀʟ : <a href="https://t.me/bot_kingdox">ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ</a>  
 
 ➻ ᴄʟɪǫᴜᴇᴢ sᴜʀ ʟᴇs ʙᴏᴜᴛᴏɴs ᴄɪ-ᴅᴇssᴏᴜs ᴘᴏᴜʀ ᴏʙᴛᴇɴɪʀ ᴅᴇ ʟ'ᴀɪᴅᴇ ᴇᴛ ᴅᴇs ɪɴғᴏʀᴍᴀᴛɪᴏɴs ʙᴀsɪǫᴜᴇs sᴜʀ ᴍᴏɪ.</b>"""
 
@@ -103,7 +102,7 @@ Lᴇs dᴏɴs sᴏɴt vʀᴀɪᴍᴇɴᴛ ᴀpᴘʀéᴄɪéᴇs ᴇᴛ ᴀɪᴅ
 
 <u>Vᴏᴜs pᴏᴜᴠᴇz ᴀʟᴇʀᴛᴇᴢ ᴜɴ ᴅᴏɴ </u>
 
-Pᴀʏᴇʀ ɪᴄɪ - <code> @hyoshassistantBot </code>
+Pᴀʏᴇʀ ɪᴄɪ - <code> @kingcey </code>
 
 Sɪ vᴏᴜs lᴇ sᴏʏᴇz, vᴏᴜs pᴏᴜᴠᴇz nᴏᴜs ᴇɴᴠᴏʏᴇʀ dᴇs cᴀᴘᴛᴜʀᴇs d'écrᴀɴs
 à - @hyoshassistantBot"""
